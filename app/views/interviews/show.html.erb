@@ -1,0 +1,13 @@
+
+
+<h2><%=@interview.title %></h2>
+<h2><%=@interview.project.name%></h2>
+
+<h3><%= @interview.date %> </h3>
+
+<p><%= @interview.description %> </p>
+
+<%=link_to "Back", root_path, class: 'btn btn-primary' %>
+<%=link_to "Edit", edit_interview_path(@interview),class: 'btn btn-primary'  %>
+<%=link_to "Delete", interview_path(@interview), method: :delete, data: {confirm:"Are you sure"}, class: 'btn btn-danger' %>
+

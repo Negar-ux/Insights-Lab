@@ -1,0 +1,21 @@
+
+<%=simple_form_for @interview do |f| %>
+
+
+
+
+<%= f.input :title, label: "Interviewee Name"%>
+<%=f.input :date %>
+
+<%= f.input :description%>
+  <%= f.select :project_id, project_select_options, {prompt: "---Select Project---"}, required: :required, class: "form-control" %>
+
+
+  <div class="p-3">
+    <%= f.button :submit, class:"btn btn-primary btn-lg btn-block"%>
+  </div>
+
+
+
+<% end %>
+

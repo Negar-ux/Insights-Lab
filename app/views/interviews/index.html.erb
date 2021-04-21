@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-8">
+      <div class="row">
+
+
+        <% @interviews.each do |interview| %>
+          <div class="col-md-4">
+            <div class="card-header">
+              <h3><%=link_to interview.title,interview_path(interview) %></h3>
+              <h4><%=interview.project.name%></h4>
+            </div>
+
+          </div>
+
+        <% end %>
+
+      </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+      <div class="card-md-3">
+
+        <ul class="list-group">
+          <li class="list-group-item active">Projects</li>
+          <%@projects.each do |project| %>
+
+          <li class="list-group-item">
+            <%=link_to project.name, interviews_path(:cate =>project.id ) %>
+            <span class="badge"> <%=project.interviews.count %></span>
+          </li>
+          <% end %>
+        </ul>
+
+
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-md-10"><h2><%=link_to "Add Interview", new_interview_path %></h2></div>
+  </div>
+
+</div>
+
+
+
+
+
+
