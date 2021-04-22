@@ -1,0 +1,5 @@
+<%= simple_form_for([@interview, @interview.notes.build]) do |f| %>
+  <%=f.input :insight%>
+  <%=f.button :submit %>
+<% end %>
+

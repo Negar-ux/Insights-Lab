@@ -1,0 +1,8 @@
+<p><%= note.insight %> </p>
+
+<%= link_to "Edit", edit_interview_note_path(note.interview, note) %>
+<%= link_to "Delete", interview_note_path(note.interview, note), method: :delete,
+            data:{confirm: "Are you sure?"} %>
+
+
+

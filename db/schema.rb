@@ -10,16 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_19_025955) do
+ActiveRecord::Schema.define(version: 2021_04_22_074124) do
 
   create_table "interviews", force: :cascade do |t|
     t.string "title"
-    t.string "date"
+    t.date "date"
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "user_id"
     t.integer "project_id"
+  end
+
+  create_table "notes", force: :cascade do |t|
+    t.text "insight"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.integer "interview_id"
   end
 
   create_table "projects", force: :cascade do |t|

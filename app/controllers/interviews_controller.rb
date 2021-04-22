@@ -1,5 +1,6 @@
 class InterviewsController < ApplicationController
   before_action :find_interview, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   def index
     @projects=Project.all
@@ -15,7 +16,6 @@ class InterviewsController < ApplicationController
   end
 
   def show
-
   end
 
   def new

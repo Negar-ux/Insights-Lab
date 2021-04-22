@@ -30,12 +30,14 @@
 
           <li class="list-group-item">
             <%=link_to project.name, interviews_path(:cate =>project.id ) %>
+            <%=link_to '(View)',project %>
             <span class="badge"> <%=project.interviews.count %></span>
           </li>
           <% end %>
         </ul>
-
-
+        <%=link_to 'Create new project', new_project_path %>
+        <br>
+        <%=link_to 'Show all the interviews', interviews_path %>
 
       </div>
 
