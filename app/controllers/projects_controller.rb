@@ -3,17 +3,20 @@ class ProjectsController < ApplicationController
   before_action :authenticate_user!
 
 
+
   # GET /projects or /projects.json
   def index
     @projects = Project.all
   end
 
   # GET /projects/1 or /projects/1.json
-  def show; end
+  def show
+  end
 
   # GET /projects/new
   def new
     @project = Project.new
+
   end
 
   # GET /projects/1/edit
@@ -44,7 +47,7 @@ class ProjectsController < ApplicationController
   
   def destroy
 
-    @project.destroy!
+    @project.destroy
     redirect_to projects_path, notice: "Deleted"
   end
 

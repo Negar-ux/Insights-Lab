@@ -1,25 +1,31 @@
 
-<div class="col-md-8">
+<div class="col-md-3">
   <h2><%=@interview.title %></h2>
-  <h2><%=@interview.project.name%></h2>
+  <h3><%=@interview.project.name%></h3>
 
-  <h3><%= @interview.date %> </h3>
+  <h4><%= @interview.date %> </h4>
 
   <p><%= @interview.description %> </p>
 
+
+
+  <%=link_to "Back", root_path, class: 'btn nav-colour font-colour' %>
+  <%=link_to "Edit", edit_interview_path(@interview),class: 'btn nav-colour font-colour'  %>
+  <%=link_to "Delete", interview_path(@interview), method: :delete, data: {confirm:"Are you sure"}, class: 'btn nav-colour font-colour' %>
+
+
 </div>
 
+
 <div class="row">
-  <div class="col-md-4">
-    <%=render @interview.notes%>
-    <div>
+  <div class="col-md-6">
+    <div class="note">
+      <%=render @interview.notes%>
+    </div>
+    <div >
       <%= render 'notes/form' %>
     </div>
   </div>
 </div>
 
-
-<%=link_to "Back", root_path, class: 'btn btn-primary' %>
-<%=link_to "Edit", edit_interview_path(@interview),class: 'btn btn-primary'  %>
-<%=link_to "Delete", interview_path(@interview), method: :delete, data: {confirm:"Are you sure"}, class: 'btn btn-danger' %>
 

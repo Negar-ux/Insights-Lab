@@ -1,6 +1,6 @@
 class InterviewsController < ApplicationController
   before_action :find_interview, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:show, :edit, :update, :destroy]
 
   def index
     @projects=Project.all
@@ -47,7 +47,7 @@ class InterviewsController < ApplicationController
 
   def destroy
     @interview.destroy
-    redirect_to root_path
+    redirect_to interview_path(@interview)
   end
 
   private

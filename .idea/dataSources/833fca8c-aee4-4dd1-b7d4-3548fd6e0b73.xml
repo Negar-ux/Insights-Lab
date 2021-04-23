@@ -1372,19 +1372,21 @@
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="504" parent="171" name="title">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
     </column>
     <column id="505" parent="171" name="date">
       <Position>3</Position>
-      <DataType>varchar|0s</DataType>
+      <DataType>date|0s</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
     </column>
     <column id="506" parent="171" name="description">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
     </column>
     <column id="507" parent="171" name="created_at">
       <Position>5</Position>
@@ -1399,10 +1401,12 @@
     <column id="509" parent="171" name="user_id">
       <Position>7</Position>
       <DataType>varchar|0s</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
     </column>
     <column id="510" parent="171" name="project_id">
       <Position>8</Position>
       <DataType>integer|0s</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
     </column>
     <key id="511" parent="171">
       <ColNames>id</ColNames>
@@ -1444,11 +1448,11 @@
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="520" parent="173" name="name">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
     </column>
     <column id="521" parent="173" name="created_at">
       <Position>3</Position>
