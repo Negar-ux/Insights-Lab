@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy ]
-  before_action :authenticate_user!
+
 
 
 
@@ -48,7 +48,7 @@ class ProjectsController < ApplicationController
   def destroy
 
     @project.destroy
-    redirect_to projects_path, notice: "Deleted"
+    redirect_to interviews_path, notice: "Deleted"
   end
 
 

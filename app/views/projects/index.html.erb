@@ -1,5 +1,4 @@
 <p id="notice"><%= notice %></p>
-
 <h1>Projects</h1>
 
 <table>
@@ -16,7 +15,7 @@
         <td><%= project.name %></td>
         <td><%= link_to 'Show', project %></td>
         <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Delete', projects_path(project), :confirm => "Are you sure?", :method => :delete  %></td>
+        <td><%= button_to 'Delete', project_path(project), :confirm => "Are you sure?", :method => :delete  %></td>
       </tr>
     <% end %>
   </tbody>

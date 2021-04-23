@@ -47,7 +47,7 @@ class InterviewsController < ApplicationController
 
   def destroy
     @interview.destroy
-    redirect_to interview_path(@interview)
+    redirect_to interviews_url
   end
 
   private

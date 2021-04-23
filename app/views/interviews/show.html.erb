@@ -1,5 +1,5 @@
 
-<div class="col-md-3">
+<div class="col-md-4">
   <h2><%=@interview.title %></h2>
   <h3><%=@interview.project.name%></h3>
 
@@ -8,10 +8,17 @@
   <p><%= @interview.description %> </p>
 
 
+<table class="table">
+  <tr>
+    <th><%=link_to "Back", root_path, class: 'btn nav-colour font-colour' %></th>
+    <th><%=link_to "Edit", edit_interview_path(@interview),class: 'btn nav-colour font-colour'  %></th>
+    <th><%=button_to "Delete", interview_path, method: :delete, data: {confirm:"Are you sure"}, class: 'btn nav-colour font-colour btnpadding' %></th>
+  </tr>
+</table>
 
-  <%=link_to "Back", root_path, class: 'btn nav-colour font-colour' %>
-  <%=link_to "Edit", edit_interview_path(@interview),class: 'btn nav-colour font-colour'  %>
-  <%=link_to "Delete", interview_path(@interview), method: :delete, data: {confirm:"Are you sure"}, class: 'btn nav-colour font-colour' %>
+
+
+
 
 
 </div>
