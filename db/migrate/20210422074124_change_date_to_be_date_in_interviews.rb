@@ -1,6 +1,6 @@
 class ChangeDateToBeDateInInterviews < ActiveRecord::Migration[6.1]
   def up
-    change_column :interviews, :date, :date
+    change_column :interviews, :date,  :date
   end
 
   def down
