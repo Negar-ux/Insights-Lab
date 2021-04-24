@@ -15,4 +15,3 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-import "./application.css.scss";
