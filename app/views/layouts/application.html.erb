@@ -20,7 +20,12 @@
       </div>
 
       <ul class="nav navbar-nav navbar-right">
-        <li> <%=link_to "Sign up", new_user_registration_path%></li>
+        <% if user_signed_in? %>
+          <span class="navbar-text"> Logged in as <%=current_user.email %></span>
+        <%else %>
+          <li> <%=link_to "Sign up", new_user_registration_path%></li>
+          <%end %>
+
         <% if user_signed_in? %>
           <li><%=link_to "Sign out", destroy_user_session_path, method: :delete %></li>
         <%else %>
@@ -28,11 +33,7 @@
         <%end %>
       </ul>
 
-      <ul class="nav navbar-nav navbar-right">
-        <% if user_signed_in? %>
-          <span class="navbar-text"> Logged in as <%=current_user.email %></span>
-        <%end%>
-      </ul>
+
     </div>
 
   </nav>
